@@ -2,4 +2,13 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  
+  ul.cards-container
+    each message in messages
+      li.message-card
+        h2.title #{message.user}
+        p.text #{message.text}
+        p.date #{message.fromNow}
+
+  a.btn(href="/new") Add A New Message
+

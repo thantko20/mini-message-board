@@ -1,0 +1,15 @@
+extends layout 
+
+block content
+  h1= title
+  form(action="/new", method='POST')
+    div.form-group
+      label.label(for="name") Name
+      input#name.input(type="text", name='name', required) 
+    div.form-group
+      label.label(for='text')  Message
+      input#text.input(type='text', name='text', required)
+    button.btn(type='submit') Submit
+
+  a(href="/") Back To Home
+
